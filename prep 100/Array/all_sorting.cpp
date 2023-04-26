@@ -18,7 +18,7 @@ void selection_srt(int *arr, int n)
         swap(arr[mini], arr[i]);
     }
 }
-
+   
 void bubble_Sort(int *arr, int size)
 {
     for (int i = 0; i < size - 1; i++)
@@ -112,7 +112,7 @@ int partition(int *arr, int start, int end)
 {
     int temp = arr[start];
     int cnt = 0;
-    for (int i = start + 1; i <=end; i++)
+    for (int i = start + 1; i <= end; i++)
     {
         if (arr[i] <= temp)
         {
@@ -121,7 +121,7 @@ int partition(int *arr, int start, int end)
     }
     int pivot_index = start + cnt;
     swap(arr[pivot_index], arr[start]);
-    //int pivot_index = start + cnt;
+    // int pivot_index = start + cnt;
 
     int i = start;
     int j = pivot_index + 1;
@@ -167,8 +167,8 @@ int main()
     int arr[] = {2, 58, 2, 8, 12, 90, 23};
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    // selection_srt(arr, size);
-    // display(arr, size);
+    selection_srt(arr, size);
+    display(arr, size);
 
     // bubble_Sort(arr, size);
     // display(arr, size);
@@ -179,8 +179,8 @@ int main()
     // merge_sort(arr, 0, size - 1);
     // display(arr, size);
 
-    quick_sort(arr, 0, size - 1);
-    display(arr, size);
+    // quick_sort(arr, 0, size - 1);
+    // display(arr, size);
 
     return 0;
 }
